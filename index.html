@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>..::JUMP BALL::..</title>
+
+        <script type="text/javascript" src="lib/jquery-1.7.1.js"></script>
+        <script type="text/javascript" src="lib/sound.js"></script>
+        <script type="text/javascript" src="_world.js"></script>
+        <script type="text/javascript" src="_eGravity.js"></script>
+        <script type="text/javascript" src="_eKeyboard.js"></script>
+        <script type="text/javascript" src="_main.js"></script>
+
+        <style type="text/css">
+            body{margin: 0 auto; text-align: center; top: 5px; position: relative; height: 550px}
+            #screen{ border: 1px solid #ccc;}            
+        </style>
+    </head>
+        <body style="background-color: #000">
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    Game.load($('#screen'));
+                });                                       
+            </script>
+            <canvas id="screen" style="background-color: green" width="451" height="550"></canvas>
+            <br />       
+        </body>
+</html>
