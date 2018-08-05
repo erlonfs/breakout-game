@@ -40,16 +40,17 @@ Game = {
 	init: function () {
 		var bricks = [];
 		var cores = ["yellow", "blue", "pink", "red", "orange", "gray", "brown",
-					"magenta", "Purple", "Silver", "Gold", "Lime", "white"];
+					"magenta", "purple", "silver", "gold", "lime", "white", 
+					"lightpink", "beige", "hotpink", "cyan", "gold", "red", "purp"];
 		var x = 1;
-		for (i = 1; i <= 7; i++) {
+		for (i = 1; i <= 14; i++) {
 			var y = 0;
 			for (j = 1; j <= 20; j++) {
 				var brick = new Model();
 				brick.UID = i + '' + j;
 				brick.name = 'tijolo';
 				brick.settings.movable = false;
-				brick.settings.width = 63;
+				brick.settings.width = 30;
 				brick.settings.height = 15;
 				brick.color = cores[j - 1];
 				brick.x = x;
@@ -69,7 +70,7 @@ Game = {
 
 				bricks.push(brick);
 			}
-			x += 65;
+			x += 33;
 		}
 
 		//criando bola
@@ -254,7 +255,7 @@ Game = {
 			contexto.fillStyle = "red";
 			contexto.font = "bold 80px Arial";
 
-			contexto.fillText("5", 210, 300)
+			contexto.fillText("3", 210, 300)
 		}, 1000);
 
 		setTimeout(function () {
@@ -263,26 +264,8 @@ Game = {
 			contexto.fillStyle = "red";
 			contexto.font = "bold 80px Arial";
 
-			contexto.fillText("4", 210, 300)
-		}, 2000);
-
-		setTimeout(function () {
-			World.clear();
-			Game.draw();
-			contexto.fillStyle = "red";
-			contexto.font = "bold 80px Arial";
-
-			contexto.fillText("3", 210, 300)
-		}, 3000);
-
-		setTimeout(function () {
-			World.clear();
-			Game.draw();
-			contexto.fillStyle = "red";
-			contexto.font = "bold 80px Arial";
-
 			contexto.fillText("2", 210, 300)
-		}, 4000);
+		}, 1300);
 
 		setTimeout(function () {
 			World.clear();
@@ -291,7 +274,7 @@ Game = {
 			contexto.font = "bold 80px Arial";
 
 			contexto.fillText("1", 210, 300)
-		}, 5000);
+		}, 1600);
 
 		setTimeout(function () {
 			World.clear();
@@ -300,9 +283,9 @@ Game = {
 			contexto.font = "bold 80px Arial";
 
 			contexto.fillText("GO!", 160, 300)
-		}, 6000);
+		}, 1900);
 
-		setTimeout(Game.run, 7000);
+		setTimeout(Game.run, 2000);
 	},
 
 	run: function () {
